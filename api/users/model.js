@@ -38,7 +38,7 @@ const update = (id, changes) => {
   if (!user) return Promise.resolve(null)
 
   const updatedUser = { ...changes, id }
-  users = users.map(d => (d.id === id) ? updatedUser : d)
+  users = users.map(d => d.id === id ? updatedUser : d)
   return Promise.resolve(updatedUser)
 }
 
